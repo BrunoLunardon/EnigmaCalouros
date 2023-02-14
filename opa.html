@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>My Puzzle Game</title>
+    <style>
+      #container {
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+      }
+      #puzzle {
+        width: 400px;
+        height: 400px;
+        margin: 50px auto;
+        background-color: lightblue;
+        border: 2px solid black;
+        padding: 25px;
+      }
+      #message {
+        width: 400px;
+        height: 50px;
+        margin: 50px auto;
+        text-align: center;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="puzzle">
+        <p id="puzzleText">Click the button to solve the puzzle:</p>
+        <button id="solveButton">Solve</button>
+      </div>
+      <div id="message"></div>
+    </div>
+    <script>
+      const solveButton = document.getElementById("solveButton");
+      const puzzleText = document.getElementById("puzzleText");
+      const message = document.getElementById("message");
+
+      solveButton.addEventListener("click", function() {
+        puzzleText.innerHTML = "The puzzle is solved!";
+        message.innerHTML = "Congratulations! You solved the puzzle.";
+      });
+    </script>
+  </body>
+</html>
